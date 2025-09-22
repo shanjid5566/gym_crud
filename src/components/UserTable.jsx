@@ -21,7 +21,7 @@ const UserTable = ({ users, setUsers }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4000/create-users/${id}`, {
+        fetch(`https://gym-curd.vercel.app/create-users/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

@@ -9,9 +9,9 @@ import EditUserInfoPage from "./pages/EditUserInfoPage.jsx";
 
 let router = createBrowserRouter([
   {
-    path: "/",
+    path: "/gym_crud",
     element: <Users></Users>,
-    loader: () => fetch("http://localhost:4000/create-users"),
+    loader: () => fetch("https://gym-curd.vercel.app/create-users"),
   },
   {
     path: "/create-users",
@@ -20,7 +20,7 @@ let router = createBrowserRouter([
   {
     path: "/users/:id",
     element: <EditUserInfoPage></EditUserInfoPage>,
-    loader: ({params}) => fetch(`http://localhost:4000/users/${params.id}`)
+    loader: ({params}) => fetch(`https://gym-curd.vercel.app/users/${params.id}`)
   },
 ]);
 
