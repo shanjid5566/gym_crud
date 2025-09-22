@@ -16,7 +16,7 @@ const CreateUsers = () => {
     // console.log(gender,status)
     const user = { name, email, gender, status };
 
-    fetch("http://localhost:4000/create-users", {
+    fetch("https://gym-curd.vercel.app/create-users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const CreateUsers = () => {
         if(data.acknowledged){
             Swal.fire("User Added successfully..");
             e.target.reset();
-            Navigate('/')
+            Navigate('/gym_crud')
         }
 
       });
@@ -36,7 +36,7 @@ const CreateUsers = () => {
   return (
     <div className="container mx-auto px-4 py-10">
       <Link
-        to={"/"}
+        to={"/gym_crud"}
         className="text-purple-700 hover:underline text-sm inline-block mb-6"
       >
         &laquo; All Users

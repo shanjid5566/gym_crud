@@ -16,7 +16,7 @@ const EditUserInfoPage = () => {
     const status = e.target.status.value;
 
     const updatedUser = { name, email, gender, status };
-    fetch(`http://localhost:4000/users/${user[0]._id}`, {
+    fetch(`https://gym-curd.vercel.app/users/${user[0]._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const EditUserInfoPage = () => {
         if (data.matchedCount > 0) {
           Swal.fire("User Information Update successfully..");
           e.target.reset();
-          navigate("/");
+          navigate("/gym_crud");
         }
       });
   };
